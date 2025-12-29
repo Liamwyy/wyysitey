@@ -51,7 +51,7 @@ const projects = [
     desc: "Typing game that aims to help players improve typing skills and spelling.",
     icon:"assets/images/fsg.png",
     image: "assets/images/fgss.png",
-    link:"#"
+    link:"https://mango-bush-08ffdc31e.3.azurestaticapps.net/"
   }
 
 ];
