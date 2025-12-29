@@ -44,7 +44,16 @@ const projects = [
     image: "assets/images/aiskmutt.png",
     link:"#"
   }
-  
+  ,
+
+  {
+    title: "Fire Spelling Game",
+    desc: "Typing game that aims to help players improve typing skills and spelling.",
+    icon:"assets/images/fsg.png",
+    image: "assets/images/fgss.png",
+    link:"#"
+  }
+
 ];
 
 const listContainer = document.getElementById('project-list-container');
