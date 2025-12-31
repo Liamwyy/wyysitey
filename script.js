@@ -109,29 +109,3 @@ projects.forEach((proj) => {
 
   listContainer.appendChild(li);
 });
-
-// Dark mode toggle: persist preference
-const darkToggle = document.getElementById('dark-toggle');
-try {
-  const saved = localStorage.getItem('site-dark');
-  if (saved === '1') document.body.classList.add('dark');
-} catch (e) {}
-
-if (darkToggle) {
-  darkToggle.addEventListener('click', () => {
-    const enabled = document.body.classList.toggle('dark');
-    try { localStorage.setItem('site-dark', enabled ? '1' : '0'); } catch (e) {}
-    darkToggle.setAttribute('aria-pressed', enabled ? 'true' : 'false');
-  });
-}
-
-// Contact form simple handler
-const contactForm = document.getElementById('contact-form');
-if (contactForm) {
-  contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const email = (document.getElementById('contact-email') || {}).value || '';
-    // Minimal UX: acknowledge input
-    alert('Thanks — message request submitted for ' + email);
-  });
-}
