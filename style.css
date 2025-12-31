@@ -125,7 +125,7 @@ aside {
 }
 
 #project-preview {
-   position: fixed;
+   position: absolute; /* revert to scrolling behavior */
    pointer-events: none;
    width: 280px;
    background: rgba(255, 255, 255, 0.95);
