@@ -105,7 +105,10 @@ aside {
    flex: 0 0 20%;
    border-right: 1px solid #f0f0f0; 
    padding-right: 40px;
-   position: relative; }
+   position: sticky;
+   top: 60px;
+   align-self: start;
+}
 
 #scroll-ball {
    position: absolute;
@@ -182,3 +185,54 @@ aside {
    font-size: 14px;
    margin-right: 8px;
 }
+
+/* Contact row: input wider with button beside */
+.contact-row {
+   display: flex;
+   gap: 8px;
+   align-items: center;
+}
+.contact-row input[type="email"] {
+   flex: 1 1 auto;
+   padding: 10px 12px;
+   border: 1px solid #d1d5db;
+   border-radius: 8px;
+   font-size: 0.95rem;
+}
+.contact-row button {
+   padding: 10px 14px;
+   border: none;
+   background-color: #467fc2;
+   color: white;
+   border-radius: 8px;
+   cursor: pointer;
+}
+.contact-row button:hover { opacity: 0.95; }
+
+@media (max-width: 720px) {
+   .contact-row { flex-direction: column; }
+   .contact-row button { width: 100%; }
+}
+
+/* Dark mode (not too dark) */
+body.dark {
+   background-color: #111827; /* slightly muted dark */
+   color: #e6eef8;
+   background-image: radial-gradient(rgba(255,255,255,0.02) 1px, transparent 1px);
+}
+body.dark #project-preview {
+   background: rgba(15,23,42,0.95);
+   border-color: #24303f;
+   box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+}
+body.dark .project-item a:hover { color: #93c5fd; }
+body.dark aside { border-right-color: #27303a; }
+
+#dark-toggle {
+   padding: 6px 10px;
+   border-radius: 8px;
+   border: 1px solid #d1d5db;
+   background: transparent;
+   cursor: pointer;
+}
+body.dark #dark-toggle { border-color: #374151; color: #e6eef8; }
